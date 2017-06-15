@@ -7,7 +7,7 @@ This project is intended as a learning and reference application for Angular wit
 * Create project using Angular CLI
     * ng new angular-cli-sampler --skip-install --style scss
 * Install [source-map-explorer](https://www.npmjs.com/package/source-map-explorer)
-
+* Add environment specific settings for title
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
 
