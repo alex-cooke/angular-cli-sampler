@@ -5,11 +5,12 @@ import { EmailComponent } from "./email/email.component";
 import { UsersComponent } from "./users/users.component";
 
 const routes: Routes = [
-  { path: 'admin', component: AdminComponent,
-  children:[
-    { path: '', component: UsersComponent },
-    { path: 'email', component: EmailComponent}  
-  ]}
+  { path: 'admin',
+    component: AdminComponent,
+    children:[
+      { path: '', component: UsersComponent },
+      { path: 'email', component: EmailComponent}  
+    ]}
 ];
 
 @NgModule({
