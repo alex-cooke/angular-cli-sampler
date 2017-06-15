@@ -4,5 +4,6 @@
   <!--<div>{{ item.someProperty }}</div>-->
 </div>
 <div>
+  <button [routerLink]="['/widget/create']">New</button>
   <widget-item *ngFor="let item of items" #widgetItem [item]="item" (widgetClick)="widgetClicked($event, widgetItem)"></widget-item>
 </div>

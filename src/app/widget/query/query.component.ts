@@ -1,3 +1,4 @@
+import { WidgetService } from '../widget.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,16 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QueryComponent implements OnInit {
 
-  items: any[] = [
-    {
-      code: 'A',
-      name: "Widget A"
-    },
-    {
-      code: 'B',
-      name: 'Widget B'
-    }
-  ];
+  items: any[];
+
+  constructor (private widgetService: WidgetService) {  }
 
   widgetClicked(event: any, widget: any) {
     console.log(event);
@@ -24,7 +18,8 @@ export class QueryComponent implements OnInit {
   }
 
 
-  ngOnInit() {
+  async ngOnInit() {
+    this.items = await this.widgetService.getWidgets();
   }
 
 }

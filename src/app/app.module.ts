@@ -1,3 +1,5 @@
+;
+import { Error404Component } from './errors/error404/error404.component';
 import { WidgetModule } from './widget/widget.module';
 import { AdminModule } from './admin/admin.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -9,12 +11,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CustomerComponent } from './customer/customer.component';
 import { HeaderComponent } from './header/header.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     CustomerComponent,
-    HeaderComponent
+    HeaderComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,
