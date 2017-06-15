@@ -1,0 +1,8 @@
+<div>
+  <div>list of widgets</div>
+  <button (click)="item.log('from the query')">Log</button>
+  <!--<div>{{ item.someProperty }}</div>-->
+</div>
+<div>
+  <widget-item *ngFor="let item of items" #widgetItem [item]="item" (widgetClick)="widgetClicked($event, widgetItem)"></widget-item>
+</div>
